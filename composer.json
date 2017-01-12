@@ -1,0 +1,32 @@
+{
+    "name": "bluora/laravel-php-elixir-copy",
+    "description": "Provides the copy functionality.",
+    "keywords": ["laravel", "php", "elixir", "copy"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@bluora.com.au"
+        }
+    ],
+    "require": {
+        "bluora/laravel-php-elixir": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "illuminate/database": "4.*|5.*",
+        "symfony/process": "~2.3",
+        "codeclimate/php-test-reporter": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluora\\PhpElixirCopy\\": "src/"
+        }
+    },
+    "scripts": {
+      "test": "composer phpunit && composer phpcs",
+      "phpcs": "./vendor/bin/phpcs -p -s --standard=PSR2 ./src ./tests",
+      "phpunit": "phpunit",
+      "hhvm": "hhvm ./vendor/phpunit/phpunit/phpunit"
+    }
+}
